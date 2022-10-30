@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font: 'Nunito', sans-serif;
+    --secondary-font: 'Dosis', sans-serif;
+    --bg:#f8f8ff;
+}
+
+.pagination_css{
+    height: auto;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+}
+.pagination_btn{
+    width: 40%;
+    margin: auto;
+    padding: 0 1rem;
+   
+}
+
+.page_counter{
+    font-family: var(--secondary-font);
+    font-size: 1.1rem;
+    margin: 0 1rem;
+}
+
+.page_btns {
+    border: none;
+    padding: .2rem 1rem;
+    outline: none;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    font-family: var(--secondary-font);
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  }
+  
+  .page_btns:before,
+  .page_btns:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: .3rem;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: "";
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f7953375,
+      #f39b8a88,
+      #faa3bc98,
+      #f2bbfcad,
+      #b1cbff70,
+      #afd9e081,
+      #78f7e696,
+      #a4dab288
+    );
+  }
+
+
+  /* css responsive  */
+
+@media only screen and (max-width: 990px) {
+    .pagination_btn{
+        width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .pagination_btn{
+        width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+
+    .pagination_css{
+       /* background-color: aqua; */
+        padding: 1rem 0;
+    
+    }
+
+    .pagination_btn{
+        width: 90%;
+    }
+    .page_counter{
+        font-size: 1rem;
+    }
+    .page_btns {
+        padding: 0 .5rem;
+        font-size: 1rem;
+       
+      }
+      
+
+
+  }
+
